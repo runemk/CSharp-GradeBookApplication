@@ -48,7 +48,7 @@ namespace GradeBook.GradeBooks
             }
             else if(averageGrade >= 60 )
             {
-                return 'A';
+                return 'B';
             }
             else if(averageGrade >= 40)
             {
