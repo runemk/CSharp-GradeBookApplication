@@ -19,7 +19,14 @@ namespace GradeBook.GradeBooks
 
         public override void CalculateStudentStatistics(string name)
         {
-            base.CalculateStudentStatistics(name);
+            if (Students.Count < 5)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+            }
+            else
+            {
+                base.CalculateStudentStatistics(name);
+            }
         }
 
         public override bool Equals(object obj)
