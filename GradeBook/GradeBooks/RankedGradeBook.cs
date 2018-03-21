@@ -39,7 +39,27 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            return base.GetLetterGrade(averageGrade);
+            if (Students.Count < 5)
+             throw new InvalidOperationException();
+
+            if (averageGrade >= 80)
+            {
+                return 'A';
+            }
+            else if(averageGrade >= 60 )
+            {
+                return 'A';
+            }
+            else if(averageGrade >= 40)
+            {
+                return 'C';
+            }
+            else if (averageGrade >= 20)
+            {
+                return 'D';
+            }
+
+            return 'F';
         }
 
         public override string ToString()
